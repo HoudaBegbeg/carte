@@ -22,59 +22,63 @@ class Entreprise
     private $nom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $adresse;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $code_postal;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $ville;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $code_ape;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $chiffre_d_affaire;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $filiere;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $complimentaire;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $poste_occcupe;
 
     /**
-     * @ORM\Column(type="geometry", options={"geometry_type"="POINT"})
+     * @ORM\Column(type="string", length=255, nullable=true, nullable=true)
      */
+    private $latitude;
 
-    private $cordonnees;
+     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $longitude;
 
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $date;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $sujet;
 
@@ -191,14 +195,25 @@ class Entreprise
         return $this;
     }
 
-    public function getCordonnees(): ?string
+    public function getLatitude(): ?string
     {
-        return $this->cordonnees;
+        return $this->latitude;
     }
 
-    public function setCordonnees(string $cordonnees): self
+    public function setLatitude(string $latitude): self
     {
-        $this->cordonnees = $cordonnees;
+        $this->latitude = $latitude;
+
+        return $this;
+    }
+    public function getLongitude(): ?string
+    {
+        return $this->longitude;
+    }
+
+    public function setLongitude(string $longitude): self
+    {
+        $this->longitude = $longitude;
 
         return $this;
     }

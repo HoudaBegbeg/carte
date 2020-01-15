@@ -1,33 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ControllerEntrepriseController!{% endblock %}
+{% block title %}Ajouter une entreprise !{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/usr/src/app/src/Controller/ControllerEntrepriseController.php'|file_link(0) }}">src/Controller/ControllerEntrepriseController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/usr/src/app/templates/controller_entreprise/index.html.twig'|file_link(0) }}">templates/controller_entreprise/index.html.twig</a></code></li>
-    </ul>
-</div>
+<section>
+{{ form_start(form) }}
+{{ form(form) }}
+{{form_errors(form)}}
+{{ form_end(form) }}
+</section>
 {% endblock %}
-        {# <div>Nom:{{ form_label(form.nom) }}</div>
-        <div>Adresse:{{ form_label(form.adresse) }}</div>
-        <div>Code Postal:{{ form_label(form.code_postal) }}</div>
-        <div>Ville:{{ form_label(form.ville) }}</div>
-        <div>Stage/ALte:rnance{ form_label(form.complimentaire) }}</div>
-        <div>Code APE:{{ form_label(form.code_ape) }}</div>
-        <div>Chiffre d'affaires:{{ form_label(form.chiffre_d_affaire) }}</div>
-        <div>Filiere:{{ form_label(form.filiere) }}</div>
-        <div>Le poste occupé:{{ form_label(form.poste_occcupe) }}</div>
-        <div>Latitude:{{ form_label(form.Latitude) }}</div>
-        <div>Longitude:{{ form_label(form.Longitude) }}</div>
-        <div>Date:{{ form_label(form.date) }}</div>
-        <div>Sujet:{{ form_label(form.sujet) }}</div> #}
+    

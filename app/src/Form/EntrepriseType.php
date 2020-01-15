@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Entreprise;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -21,10 +22,11 @@ class EntrepriseType extends AbstractType
             ->add('filiere')
             ->add('complimentaire')
             ->add('poste_occcupe')
-            ->add('Latitude')
-            ->add('Longitude')
+            ->add('latitude')
+            ->add('longitude')
             ->add('date')
             ->add('sujet')
+            ->add('save', SubmitType::class)
         ;
     }
 
